@@ -55,8 +55,8 @@ def build_model(hidden: int = 50) -> nn.Module:
         return nn.Linear(1, 1)
 
 
-def train_model(n_train: int = 200,
-                hidden: int = 50,
+def train_model(n_train: int = 2000,
+                hidden: int = 1,
                 epochs: int = 2000,
                 lr: float = 1e-3,
                 eval_n: int = 200,
