@@ -50,7 +50,11 @@ def f_1(x, check_domain: bool = False):
 def build_model(hidden: int = 50) -> nn.Module:
     """Builds and returns a small MLP or single linear layer when hidden==0."""
     if hidden > 0:
-        return nn.Sequential(nn.Linear(1, hidden), nn.Tanh(), nn.Linear(hidden, 1))
+        return nn.Sequential(
+            nn.Linear(1, hidden),
+            nn.Tanh(),
+            nn.Linear(hidden, 1)
+        )
     else:
         return nn.Linear(1, 1)
 
